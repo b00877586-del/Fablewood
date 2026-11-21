@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -9,49 +9,49 @@
 
 :root {
     --cream: #f8f1e7;
-    --light-brown: #d9c3a5;
-    --brown: #8b6246;
-    --dark-brown: #422d23;
-    --deep: #251b17;
+    --beige: #e8d8c3;
+    --brown: #9b7457;
+    --dark-brown: #4b3327;
+    --deep-brown: #281d17;
     --white: #fffaf3;
 }
 
 body {
     background: var(--cream);
     color: var(--dark-brown);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
 /* Navigation */
 
 .navbar {
     width: 100%;
-    padding: 22px 8%;
+    padding: 20px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(248, 241, 231, 0.95);
+    background: var(--cream);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 3px 15px rgba(66, 45, 35, 0.08);
+    box-shadow: 0 3px 15px rgba(75, 51, 39, 0.08);
 }
 
 .logo {
     text-decoration: none;
     color: var(--dark-brown);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 700;
+    font-family: 'Amiri', serif;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .logo span {
-    font-size: 23px;
+    font-size: 22px;
 }
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 nav a {
@@ -67,20 +67,20 @@ nav a:hover {
 
 .auth-buttons {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 button {
     cursor: pointer;
-    font-family: inherit;
+    font-family: 'Cairo', sans-serif;
     transition: 0.3s;
 }
 
 .login-btn,
 .signup-btn {
-    padding: 10px 20px;
+    padding: 9px 18px;
     border-radius: 25px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .login-btn {
@@ -100,7 +100,7 @@ button {
     transform: translateY(-3px);
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero {
     min-height: 570px;
@@ -110,38 +110,38 @@ button {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(120deg, #ead9c3, #f8f1e7, #dfc9ae);
+    background: linear-gradient(120deg, #e7d4bd, #f8f1e7, #ddc5a9);
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 650px;
     position: relative;
     z-index: 2;
 }
 
 .welcome-label {
-    letter-spacing: 5px;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--brown);
+    letter-spacing: 2px;
 }
 
 .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(45px, 6vw, 75px);
-    line-height: 1.05;
+    font-family: 'Amiri', serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.4;
     margin: 20px 0;
     color: var(--dark-brown);
 }
 
 .hero p {
-    max-width: 430px;
-    line-height: 1.9;
+    max-width: 480px;
+    line-height: 2;
     color: #755b49;
     margin-bottom: 30px;
 }
 
 .explore-btn {
-    padding: 15px 30px;
+    padding: 13px 30px;
     background: var(--dark-brown);
     border: none;
     border-radius: 30px;
@@ -155,22 +155,93 @@ button {
 }
 
 .hero-decoration {
-    font-size: 150px;
-    animation: fly 4s ease-in-out infinite;
+    font-size: 140px;
+    animation: bookFloat 4s ease-in-out infinite;
     filter: drop-shadow(0 10px 15px rgba(66, 45, 35, 0.2));
 }
 
-@keyframes fly {
+@keyframes bookFloat {
     0%, 100% {
-        transform: translateY(0) rotate(-10deg);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-25px) rotate(10deg);
+        transform: translateY(-20px);
     }
 }
 
-/* Books */
+/* Butterflies */
+
+.butterflies {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.butterflies span {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.3;
+    filter: grayscale(0.7);
+    animation: butterflyFly 12s ease-in-out infinite;
+}
+
+.butterflies span:nth-child(1) {
+    top: 12%;
+    left: 10%;
+}
+
+.butterflies span:nth-child(2) {
+    top: 65%;
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.butterflies span:nth-child(3) {
+    top: 20%;
+    left: 75%;
+    animation-delay: 4s;
+}
+
+.butterflies span:nth-child(4) {
+    top: 75%;
+    left: 85%;
+    animation-delay: 1s;
+}
+
+.butterflies span:nth-child(5) {
+    top: 45%;
+    left: 55%;
+    animation-delay: 5s;
+}
+
+.butterflies span:nth-child(6) {
+    top: 85%;
+    left: 50%;
+    animation-delay: 3s;
+}
+
+@keyframes butterflyFly {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(35px, -35px) rotate(15deg);
+    }
+
+    50% {
+        transform: translate(-20px, -65px) rotate(-15deg);
+    }
+
+    75% {
+        transform: translate(30px, -25px) rotate(10deg);
+    }
+}
+
+/* Books Section */
 
 .books-section {
     padding: 90px 8%;
@@ -179,15 +250,15 @@ button {
 
 .section-heading span,
 .quotes-section span {
-    letter-spacing: 4px;
-    font-size: 11px;
+    font-size: 12px;
     color: var(--brown);
+    letter-spacing: 2px;
 }
 
 .section-heading h2,
 .quotes-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 43px;
+    font-family: 'Amiri', serif;
+    font-size: 40px;
     margin: 15px 0;
 }
 
@@ -221,7 +292,7 @@ button {
 }
 
 .book-card h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Amiri', serif;
     font-size: 25px;
     margin-bottom: 12px;
 }
@@ -229,10 +300,10 @@ button {
 .book-card p {
     color: #806b5c;
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
-/* Quotes */
+/* Quotes Section */
 
 .quotes-section {
     padding: 90px 15%;
@@ -242,14 +313,14 @@ button {
 
 .quotes-section blockquote {
     margin-top: 30px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Amiri', serif;
     font-size: 27px;
     font-style: italic;
-    line-height: 1.7;
+    line-height: 1.9;
     color: #684b38;
 }
 
-/* Community */
+/* Community Section */
 
 .community-section {
     padding: 90px 10%;
@@ -259,22 +330,22 @@ button {
 }
 
 .community-section h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Amiri', serif;
     font-size: 42px;
     margin-bottom: 20px;
 }
 
 .community-section p {
-    max-width: 550px;
+    max-width: 600px;
     margin: auto;
-    line-height: 1.9;
+    line-height: 2;
     color: #ddcbbb;
 }
 
 .community-btn {
     margin-top: 30px;
     padding: 13px 28px;
-    background: var(--light-brown);
+    background: var(--beige);
     border: none;
     border-radius: 30px;
     color: var(--dark-brown);
@@ -290,12 +361,12 @@ button {
 footer {
     padding: 35px 15px;
     text-align: center;
-    background: var(--deep);
+    background: var(--deep-brown);
     color: var(--cream);
 }
 
 footer h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Amiri', serif;
     margin-bottom: 10px;
 }
 
@@ -311,7 +382,8 @@ footer p {
 
     .navbar {
         flex-wrap: wrap;
-        gap: 20px;
+        justify-content: center;
+        gap: 18px;
     }
 
     nav {
@@ -321,7 +393,7 @@ footer p {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
+        gap: 35px;
     }
 
     .hero p {
@@ -341,17 +413,13 @@ footer p {
 @media (max-width: 500px) {
 
     .navbar {
-        justify-content: center;
+        padding: 15px 5%;
     }
 
     nav {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-    }
-
-    .auth-buttons {
-        justify-content: center;
     }
 
     .hero {
@@ -361,4 +429,5 @@ footer p {
     .quotes-section {
         padding: 70px 8%;
     }
+
 }
