@@ -5,26 +5,29 @@ console.log("Welcome to Fablewood!");
 const welcomeButton = document.getElementById("welcomeBtn");
 
 welcomeButton.addEventListener("click", function() {
-    alert("Welcome to Fablewood! 🦋");
+    alert("أهلًا بك في عالم Fablewood! 🦋");
 });
+
 
 // Login Button
 const loginButton = document.querySelector(".login-btn");
 
 loginButton.addEventListener("click", function() {
-    alert("Login page is coming soon!");
+    alert("صفحة تسجيل الدخول قريبًا!");
 });
+
 
 // Sign Up Button
 const signupButton = document.querySelector(".signup-btn");
 
 signupButton.addEventListener("click", function() {
-    alert("Create your account soon!");
+    alert("صفحة إنشاء الحساب قريبًا!");
 });
+
 
 // Community Button
 const communityButton = document.querySelector(".community-btn");
 
 communityButton.addEventListener("click", function() {
-    alert("Welcome to our reading community! 📚");
+    alert("أهلًا بك في مجتمع القراء! 📚");
 });
