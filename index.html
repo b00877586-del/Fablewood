@@ -12,47 +12,122 @@
 
 <body>
 
-    <header>
-        <h1>Fablewood 🦋</h1>
-        <p>Where Every Story Finds a Home</p>
+    <header class="navbar">
+
+        <a href="#home" class="logo">Fablewood <span>🦋</span></a>
 
         <nav>
             <a href="#home">الرئيسية</a>
-            <a href="#library">المكتبة</a>
+            <a href="#books">الروايات</a>
             <a href="#quotes">الاقتباسات</a>
-            <a href="#community">مجتمع القراء</a>
+            <a href="#community">المجتمع</a>
         </nav>
+
+        <div class="auth-buttons">
+            <button class="login-btn">تسجيل الدخول</button>
+            <button class="signup-btn">إنشاء حساب</button>
+        </div>
+
     </header>
+
 
     <main>
 
-        <section id="home">
-            <h2>Welcome to Fablewood</h2>
-            <p>عالم هادئ، حيث تبدأ الحكايات ولا تنتهي الأحلام.</p>
+        <section class="hero" id="home">
 
-            <button>اكتشف عالمنا</button>
+            <div class="hero-content">
+
+                <span class="welcome-label">A WORLD OF STORIES</span>
+
+                <h1>Where Every Story<br>Finds a Home</h1>
+
+                <p>
+                    بين صفحات الكتب، وفي هدوء الحكايات،
+                    يوجد عالم ينتظرك لاكتشافه.
+                </p>
+
+                <button class="explore-btn">
+                    اكتشف عالم Fablewood
+                </button>
+
+            </div>
+
+            <div class="hero-decoration">
+                🦋
+            </div>
+
         </section>
 
-        <section id="library">
-            <h2>مكتبة الحكايات</h2>
-            <p>كل رواية باب لعالم جديد.</p>
+
+        <section class="books-section" id="books">
+
+            <div class="section-heading">
+                <span>DISCOVER NEW WORLDS</span>
+                <h2>أبواب إلى عوالم أخرى</h2>
+                <p>كل رواية تحمل عالمًا لم تكتشفه بعد.</p>
+            </div>
+
+            <div class="books-container">
+
+                <div class="book-card">
+                    <div class="book-icon">📖</div>
+                    <h3>قريبًا...</h3>
+                    <p>حكايتك القادمة تنتظرك هنا.</p>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-icon">📚</div>
+                    <h3>قريبًا...</h3>
+                    <p>عالم جديد خلف كل صفحة.</p>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-icon">✨</div>
+                    <h3>قريبًا...</h3>
+                    <p>دع خيالك يقودك.</p>
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="quotes">
-            <h2>همسات من الكتب</h2>
-            <p>بعض الكلمات تستحق أن تبقى معنا إلى الأبد.</p>
+
+        <section class="quotes-section" id="quotes">
+
+            <span>WORDS THAT STAY</span>
+
+            <h2>همسات من عالم الكتب</h2>
+
+            <blockquote>
+                "بعض العوالم لا نجدها على الخرائط،
+                بل نجدها بين صفحات الروايات."
+            </blockquote>
+
         </section>
 
-        <section id="community">
-            <h2>مجتمع القراء</h2>
-            <p>هنا يلتقي عشاق الحكايات.</p>
+
+        <section class="community-section" id="community">
+
+            <h2>لست وحدك في هذا العالم</h2>
+
+            <p>
+                اجتمع مع عشاق الروايات،
+                وشاركهم اقتباساتك وحكاياتك المفضلة.
+            </p>
+
+            <button>انضم إلى مجتمعنا</button>
+
         </section>
 
     </main>
 
+
     <footer>
-        <p>Fablewood © 2026</p>
+        <h2>Fablewood 🦋</h2>
+        <p>Where Every Story Finds a Home.</p>
+        <p>© 2026 Fablewood. All rights reserved.</p>
     </footer>
+
 
     <script src="script.js"></script>
 
