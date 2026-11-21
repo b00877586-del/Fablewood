@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -7,140 +7,157 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --cream: #f8f1e7;
+    --light-brown: #d9c3a5;
+    --brown: #8b6246;
+    --dark-brown: #422d23;
+    --deep: #251b17;
+    --white: #fffaf3;
+}
+
 body {
-    background: #f5ecdf;
-    color: #604a38;
-    font-family: 'Cairo', sans-serif;
+    background: var(--cream);
+    color: var(--dark-brown);
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Navigation */
 
 .navbar {
+    width: 100%;
+    padding: 22px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: #eadbc8;
-    flex-wrap: wrap;
-    gap: 15px;
+    background: rgba(248, 241, 231, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(66, 45, 35, 0.08);
 }
 
 .logo {
-    font-family: 'Amiri', serif;
-    font-size: 32px;
-    font-weight: bold;
-    color: #68472f;
     text-decoration: none;
+    color: var(--dark-brown);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 23px;
 }
 
 nav {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 30px;
 }
 
 nav a {
-    color: #76563d;
     text-decoration: none;
+    color: var(--dark-brown);
+    font-size: 14px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #b18458;
-}
-
-/* Buttons */
-
-button {
-    font-family: 'Cairo', sans-serif;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s;
+    color: var(--brown);
 }
 
 .auth-buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
 }
 
 .login-btn,
 .signup-btn {
-    padding: 9px 18px;
+    padding: 10px 20px;
     border-radius: 25px;
+    font-size: 13px;
 }
 
 .login-btn {
     background: transparent;
-    color: #76563d;
-    border: 1px solid #76563d;
+    border: 1px solid var(--brown);
+    color: var(--dark-brown);
 }
 
-.signup-btn,
-.explore-btn,
-.community-section button {
-    background: #76563d;
+.signup-btn {
+    background: var(--dark-brown);
+    border: 1px solid var(--dark-brown);
     color: white;
 }
 
-.signup-btn:hover,
-.explore-btn:hover,
-.community-section button:hover {
-    background: #a17a56;
+.login-btn:hover,
+.signup-btn:hover {
+    transform: translateY(-3px);
 }
 
 /* Hero */
 
 .hero {
-    min-height: 480px;
+    min-height: 570px;
+    padding: 100px 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #ead8c1, #fff8ed);
+    background: linear-gradient(120deg, #ead9c3, #f8f1e7, #dfc9ae);
 }
 
 .hero-content {
-    max-width: 650px;
-    z-index: 1;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
 }
 
-.welcome-label,
-.section-heading span,
-.quotes-section > span {
-    color: #a17a56;
-    letter-spacing: 3px;
-    font-size: 13px;
+.welcome-label {
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: var(--brown);
 }
 
 .hero h1 {
-    font-family: 'Amiri', serif;
-    font-size: 55px;
-    color: #65452f;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.05;
     margin: 20px 0;
-    direction: ltr;
+    color: var(--dark-brown);
 }
 
 .hero p {
-    line-height: 2;
-    color: #92745a;
+    max-width: 430px;
+    line-height: 1.9;
+    color: #755b49;
+    margin-bottom: 30px;
 }
 
 .explore-btn {
-    margin-top: 25px;
-    padding: 13px 30px;
+    padding: 15px 30px;
+    background: var(--dark-brown);
+    border: none;
     border-radius: 30px;
-    font-size: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.explore-btn:hover {
+    background: var(--brown);
+    transform: translateY(-4px);
 }
 
 .hero-decoration {
-    position: absolute;
-    top: 40px;
-    right: 12%;
-    font-size: 55px;
-    animation: fly 5s infinite ease-in-out;
+    font-size: 150px;
+    animation: fly 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(66, 45, 35, 0.2));
 }
 
 @keyframes fly {
@@ -149,133 +166,199 @@ button {
     }
 
     50% {
-        transform: translateY(-25px) rotate(15deg);
+        transform: translateY(-25px) rotate(10deg);
     }
 }
 
 /* Books */
 
 .books-section {
-    padding: 75px 20px;
+    padding: 90px 8%;
     text-align: center;
 }
 
+.section-heading span,
+.quotes-section span {
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: var(--brown);
+}
+
 .section-heading h2,
-.quotes-section h2,
-.community-section h2 {
-    font-family: 'Amiri', serif;
-    font-size: 36px;
+.quotes-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 43px;
     margin: 15px 0;
-    color: #765338;
 }
 
 .section-heading p {
-    color: #92765d;
+    color: #806b5c;
 }
 
 .books-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .book-card {
-    background: #fffaf2;
-    border: 1px solid #ddc9ae;
-    border-radius: 18px;
-    padding: 30px;
-    width: 260px;
+    padding: 40px 25px;
+    background: var(--white);
+    border: 1px solid #e5d5c2;
+    border-radius: 15px;
     transition: 0.3s;
 }
 
 .book-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px #76533820;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(66, 45, 35, 0.1);
 }
 
 .book-icon {
     font-size: 45px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .book-card h3 {
-    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    margin-bottom: 12px;
 }
 
 .book-card p {
-    color: #92765d;
+    color: #806b5c;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 /* Quotes */
 
 .quotes-section {
+    padding: 90px 15%;
     text-align: center;
-    padding: 75px 20px;
-    background: #eadbc8;
+    background: #e9d9c6;
 }
 
 .quotes-section blockquote {
-    font-family: 'Amiri', serif;
-    font-size: 25px;
-    line-height: 2;
-    max-width: 650px;
-    margin: 25px auto 0;
-    color: #765338;
+    margin-top: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-style: italic;
+    line-height: 1.7;
+    color: #684b38;
 }
 
 /* Community */
 
 .community-section {
+    padding: 90px 10%;
     text-align: center;
-    padding: 80px 20px;
+    background: var(--dark-brown);
+    color: var(--cream);
+}
+
+.community-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
 .community-section p {
-    line-height: 2;
-    color: #92765d;
+    max-width: 550px;
+    margin: auto;
+    line-height: 1.9;
+    color: #ddcbbb;
 }
 
-.community-section button {
-    padding: 12px 30px;
-    border-radius: 25px;
-    margin-top: 25px;
+.community-btn {
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: var(--light-brown);
+    border: none;
+    border-radius: 30px;
+    color: var(--dark-brown);
+}
+
+.community-btn:hover {
+    background: white;
+    transform: translateY(-3px);
 }
 
 /* Footer */
 
 footer {
-    text-align: center;
     padding: 35px 15px;
-    background: #dfcbb3;
-    color: #765338;
-    line-height: 2;
+    text-align: center;
+    background: var(--deep);
+    color: var(--cream);
 }
 
 footer h2 {
-    font-family: 'Amiri', serif;
-    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 10px;
 }
 
-/* Mobile */
+footer p {
+    font-size: 12px;
+    color: #c9b6a5;
+    margin-top: 8px;
+}
 
-@media (max-width: 750px) {
+/* Responsive Design */
+
+@media (max-width: 850px) {
+
     .navbar {
-        justify-content: center;
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     nav {
-        justify-content: center;
+        gap: 15px;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .books-container {
+        grid-template-columns: 1fr;
     }
 
     .hero-decoration {
-        right: 5%;
-        font-size: 35px;
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .auth-buttons {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .quotes-section {
+        padding: 70px 8%;
     }
 }
