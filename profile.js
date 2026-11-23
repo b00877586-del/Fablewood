@@ -1,9 +1,8 @@
 // Firebase Imports
-import { auth, db } from "./firebase.js";
-
 import {
     onAuthStateChanged,
-    updateProfile
+    updateProfile,
+    signOut
 } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
 
 import {
