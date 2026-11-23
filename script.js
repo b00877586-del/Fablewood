@@ -1,4 +1,4 @@
-// Firebase Imports
+٨// Firebase Imports
 import { auth, db } from "./firebase.js";
 
 import {
@@ -201,14 +201,34 @@ authForm.addEventListener("submit", async function(event) {
 
 });
 
-
 // Check Login State
+const profileBtn = document.getElementById("profileBtn");
+
 onAuthStateChanged(auth, function(user) {
 
     if (user) {
+
         console.log("Logged in:", user.displayName);
+
+        signupButton.style.display = "none";
+        loginButton.style.display = "none";
+
+        profileBtn.style.display = "inline-block";
+
     } else {
+
         console.log("No user logged in.");
+
+        signupButton.style.display = "inline-block";
+        loginButton.style.display = "inline-block";
+
+        profileBtn.style.display = "none";
     }
 
+});
+
+
+// Open Profile Page
+profileBtn.addEventListener("click", function() {
+    window.location.href = "profile.html";
 });
