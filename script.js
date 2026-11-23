@@ -1,3 +1,4 @@
+import { auth, db } from "./firebase.js";
 // Welcome Message
 console.log("Welcome to Fablewood!");
 
