@@ -39,3 +39,21 @@ const communityButton = document.querySelector(".community-btn");
 communityButton.addEventListener("click", function() {
     alert("أهلًا بك في مجتمع القراء! 📚");
 });
+// Authentication Elements
+
+const authModal = document.getElementById("authModal");
+const authForm = document.getElementById("authForm");
+const authTitle = document.getElementById("authTitle");
+const authSubmit = document.getElementById("authSubmit");
+const authSwitch = document.getElementById("authSwitch");
+const authMessage = document.getElementById("authMessage");
+
+const usernameInput = document.getElementById("username");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+
+const signupButton = document.querySelector(".signup-btn");
+const loginButton = document.querySelector(".login-btn");
+const closeModal = document.getElementById("closeModal");
+
+let isSignupMode = true;
