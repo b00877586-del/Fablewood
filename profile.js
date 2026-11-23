@@ -115,3 +115,25 @@ onAuthStateChanged(auth, async function(user) {
     }
 
 });
+// Logout Button
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", async function() {
+
+    try {
+
+        await signOut(auth);
+
+        alert("تم تسجيل الخروج بنجاح ❤️");
+
+        window.location.href = "index.html";
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("حدث خطأ أثناء تسجيل الخروج.");
+
+    }
+
+});
