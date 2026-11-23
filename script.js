@@ -1,9 +1,10 @@
 import { auth, db } from "./firebase.js";
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged,
+    updateProfile
 } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
 // Welcome Message
 console.log("Welcome to Fablewood!");
