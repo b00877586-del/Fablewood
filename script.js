@@ -33,8 +33,6 @@ const communityButton = document.querySelector(".community-btn");
 communityButton.addEventListener("click", function() {
     alert("أهلًا بك في مجتمع القراء! 📚");
 });
-
-
 // Authentication Elements
 const authModal = document.getElementById("authModal");
 const authForm = document.getElementById("authForm");
@@ -109,8 +107,6 @@ function updateAuthMode() {
 
     authMessage.textContent = "";
 }
-
-
 // Create Account / Login
 authForm.addEventListener("submit", async function(event) {
 
@@ -121,7 +117,6 @@ authForm.addEventListener("submit", async function(event) {
     const username = usernameInput.value.trim();
 
     authMessage.textContent = "جارٍ تنفيذ طلبك...";
-
     authSubmit.disabled = true;
 
     try {
