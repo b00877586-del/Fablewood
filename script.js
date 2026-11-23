@@ -1,4 +1,4 @@
-٨// Firebase Imports
+// Firebase Imports
 import { auth, db } from "./firebase.js";
 
 import {
