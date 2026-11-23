@@ -203,7 +203,7 @@ authForm.addEventListener("submit", async function(event) {
 
 // Check Login State
 const profileBtn = document.getElementById("profileBtn");
-console.log("Profile button:", profileBtn);
+
 onAuthStateChanged(auth, function(user) {
 
     if (user) {
