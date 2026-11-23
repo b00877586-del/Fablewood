@@ -438,3 +438,120 @@ footer p {
     height: auto;
     border-radius: 20px;
 }
+/* Authentication Modal */
+
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 8, 20, 0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.auth-modal.active {
+    display: flex;
+}
+
+.auth-box {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    background: linear-gradient(145deg, #102c43, #071725);
+    border: 1px solid rgba(100, 190, 255, 0.35);
+    border-radius: 22px;
+    box-shadow: 0 0 35px rgba(35, 145, 220, 0.2);
+    text-align: center;
+    animation: modalAppear 0.35s ease;
+}
+
+.auth-box h2 {
+    color: #d7efff;
+    margin-bottom: 28px;
+    font-size: 26px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    background: none;
+    border: none;
+    color: #b9dfff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#authForm input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(120, 190, 255, 0.25);
+    border-radius: 10px;
+    outline: none;
+    background: #091d2d;
+    color: white;
+    font-size: 15px;
+    text-align: right;
+}
+
+#authForm input:focus {
+    border-color: #65bfff;
+    box-shadow: 0 0 10px rgba(80, 170, 255, 0.2);
+}
+
+#authForm button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #1676ae, #39a9dc);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#authForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(50, 160, 230, 0.3);
+}
+
+#authSwitch {
+    margin-top: 22px;
+    color: #b7cddd;
+    font-size: 14px;
+}
+
+#authSwitch span {
+    color: #6dc6ff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#authMessage {
+    margin-top: 15px;
+    color: #8edaff;
+    font-size: 14px;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
