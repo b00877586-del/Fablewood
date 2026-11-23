@@ -126,7 +126,7 @@ logoutBtn.addEventListener("click", async function() {
         await signOut(auth);
 
         alert("تم تسجيل الخروج بنجاح ❤️");
-
+         alert("ملف profile.js يعمل!");
         window.location.href = "index.html";
 
     } catch (error) {
