@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>FABLEWOOD | عالم الحكايات</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <header class="navbar">
-
         <a href="#home" class="logo">
             FABLEWOOD <span>🦋</span>
         </a>
@@ -30,13 +26,10 @@
             <button class="login-btn">تسجيل الدخول</button>
             <button class="signup-btn">إنشاء حساب</button>
         </div>
-
     </header>
-
 
     <main>
 
-        <!-- Hero Section -->
         <section class="hero" id="home">
 
             <div class="butterflies" aria-hidden="true">
@@ -49,7 +42,6 @@
             </div>
 
             <div class="hero-content">
-
                 <span class="welcome-label">
                     أَهْلًا بِكَ فِي عَالَمِ الحِكَايَات
                 </span>
@@ -69,29 +61,21 @@
                 <button class="explore-btn" id="welcomeBtn">
                     اكتشف عالمنا
                 </button>
-
             </div>
 
-        <div class="hero-decoration">
-    <img src="de33a563-c265-4be8-a83b-5142c423ca2b.png" alt="شعار Fablewood">
-        </div>         
+            <div class="hero-decoration">
+                <img src="de33a563-c265-4be8-a83b-5142c423ca2b.png"
+                     alt="شعار Fablewood">
+            </div>
 
         </section>
 
-
-        <!-- Books Section -->
         <section class="books-section" id="books">
 
             <div class="section-heading">
-
                 <span>عَوَالِمُ لَمْ تَكْتَشِفْهَا بَعْد</span>
-
                 <h2>أبواب إلى عوالم أخرى</h2>
-
-                <p>
-                    ربما تجد بين هذه الصفحات حكايتك القادمة.
-                </p>
-
+                <p>ربما تجد بين هذه الصفحات حكايتك القادمة.</p>
             </div>
 
             <div class="books-container">
@@ -115,28 +99,19 @@
                 </div>
 
             </div>
-
         </section>
 
-
-        <!-- Quotes Section -->
         <section class="quotes-section" id="quotes">
-
             <span>هَمَسَاتٌ بَيْنَ الصَّفَحَات</span>
-
             <h2>كلمات تبقى في الذاكرة</h2>
 
             <blockquote>
                 «بعض العوالم لا نجدها على الخرائط،
                 بل نعثر عليها بين صفحات الروايات».
             </blockquote>
-
         </section>
 
-
-        <!-- Community Section -->
         <section class="community-section" id="community">
-
             <h2>لست وحدك في هذا العالم</h2>
 
             <p>
@@ -149,68 +124,66 @@
             <button class="community-btn">
                 انضم إلى مجتمع القراء
             </button>
-
         </section>
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
-
         <h2>FABLEWOOD 🦋</h2>
-
         <p>حيث تجد كل حكاية موطنًا لها.</p>
-
         <p>© 2026 Fablewood. جميع الحقوق محفوظة.</p>
-
     </footer>
-<div class="auth-modal" id="authModal">
-    <div class="auth-box">
 
-        <button class="close-modal" id="closeModal">&times;</button>
+    <!-- نافذة تسجيل الدخول وإنشاء الحساب -->
+    <div class="auth-modal" id="authModal">
 
-        <h2 id="authTitle">إنشاء حساب جديد</h2>
+        <div class="auth-box">
 
-        <form id="authForm">
+            <button class="close-modal" id="closeModal">&times;</button>
 
-            <input
-                type="text"
-                id="username"
-                placeholder="اسم المستخدم"
-                required
-            >
+            <h2 id="authTitle">إنشاء حساب جديد</h2>
 
-            <input
-                type="email"
-                id="email"
-                placeholder="البريد الإلكتروني"
-                required
-            >
+            <form id="authForm">
 
-            <input
-                type="password"
-                id="password"
-                placeholder="كلمة المرور"
-                required
-                minlength="6"
-            >
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="اسم المستخدم"
+                    required
+                >
 
-            <button type="submit" id="authSubmit">
-                إنشاء حساب
-            </button>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="البريد الإلكتروني"
+                    required
+                >
 
-        </form>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="كلمة المرور"
+                    required
+                    minlength="6"
+                >
 
-        <p id="authSwitch">
-            لديك حساب بالفعل؟
-            <span>تسجيل الدخول</span>
-        </p>
+                <button type="submit" id="authSubmit">
+                    إنشاء حساب
+                </button>
 
-        <p id="authMessage"></p>
+            </form>
+
+            <p id="authSwitch">
+                لديك حساب بالفعل؟
+                <span>تسجيل الدخول</span>
+            </p>
+
+            <p id="authMessage"></p>
+
+        </div>
 
     </div>
-</div>
+
     <script type="module" src="script.js"></script>
 
 </body>
