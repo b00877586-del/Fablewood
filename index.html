@@ -165,7 +165,52 @@
         <p>© 2026 Fablewood. جميع الحقوق محفوظة.</p>
 
     </footer>
+<div class="auth-modal" id="authModal">
+    <div class="auth-box">
 
+        <button class="close-modal" id="closeModal">&times;</button>
+
+        <h2 id="authTitle">إنشاء حساب جديد</h2>
+
+        <form id="authForm">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="اسم المستخدم"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="البريد الإلكتروني"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="كلمة المرور"
+                required
+                minlength="6"
+            >
+
+            <button type="submit" id="authSubmit">
+                إنشاء حساب
+            </button>
+
+        </form>
+
+        <p id="authSwitch">
+            لديك حساب بالفعل؟
+            <span>تسجيل الدخول</span>
+        </p>
+
+        <p id="authMessage"></p>
+
+    </div>
+</div>
     <script type="module" src="script.js"></script>
 
 </body>
